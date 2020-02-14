@@ -1,38 +1,124 @@
-.App {
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  background-color: #1b262c;
+}
+
+.hidden {
+  display: none;
+}
+
+.align-center{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h1 {
+  text-align: center;
+  padding: 1em;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 60%;
+  margin: 2em auto 0em auto;
+}
+
+.search-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.search-form input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  flex: 8;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.search-form  button {
+  float: left;
+  flex: 2;
+  padding: 10px;
+  background: #0f4c75;
   color: white;
+  font-size: 17px;
+  border: 1px solid #0f4c75;
+  border-left: none;
+  cursor: pointer;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-form  button:hover {
+  background: #0f4a71;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stats-container {
+  margin-top: 2em;
+}
+
+.user-container{
+  margin: 1em 0em;
+}
+
+.card .avatar {
+  width: 15%;
+  border: 6px solid #0f4a71;
+  border-radius: 50%;
+}
+
+.card .name {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 1.5em;
+  text-transform: uppercase;
+}
+
+.card .username {
+  color: #3282b8;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: .5em;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.box {
+  padding: 1.5em 2em;
+  border-radius: 6px;
+  background-color: #27373f;
+  width: 20%;
+  margin: 0em .2em;
+  color: #fff;
+}
+
+.box .box-header {
+  font-weight: 400;
+  margin-bottom: .7em;
+}
+
+.box .box-item {
+  font-weight: 300;
 }
